@@ -23,7 +23,7 @@ export const hero = {
   heading: 'Stop paying people to copy and paste.',
   lead: 'We automate the repetitive work between your systems. Fixed price, live in weeks, and looked after by us once it’s running.',
   primaryCta: { label: 'Book an Automation Check', subject: 'Automation Check' },
-  secondaryCta: { label: 'See how it works', href: '#engage' },
+  secondaryCta: { label: 'See the three steps', href: '#engage' },
 };
 
 // The animated diagram beside the hero heading.
