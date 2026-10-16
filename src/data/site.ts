@@ -128,7 +128,7 @@ export const principles = {
 export const about = {
   heading: 'Who we are',
   paragraphs: [
-    'DreamLogic is two senior solution architects based in Nelson. Between us we’ve designed and run the systems behind councils, utilities, health providers and national-scale backup: the kind of infrastructure that isn’t allowed to fall over.',
+    'DreamLogic is two senior solution architects based in Nelson. Between us we’ve designed and run the systems behind councils, utilities and health providers: the kind of infrastructure that isn’t allowed to fall over.',
     'We started DreamLogic to bring that same discipline to automation, for businesses that don’t have an IT department to spare.',
   ],
 };
