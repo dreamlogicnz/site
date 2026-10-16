@@ -1,0 +1,90 @@
+---
+// "Manual process vs one automated line" diagram from the hero.
+// Steps come from src/data/site.ts (flow.manualSteps). Five steps is the designed fit;
+// the layout extends to more, but the hero column gets taller.
+import { flow } from '../data/site';
+
+const xs = [24, 112, 52, 124, 64];
+const pts = flow.manualSteps.map((label, i) => ({
+  label,
+  x: i === 0 ? 24 : xs[i % xs.length],
+  y: 30 + i * 74,
+}));
+const last = pts[pts.length - 1];
+const end = { x: 24, y: last.y + 84 };
+const all = [...pts, end];
+
+let meander = `M${all[0].x} ${all[0].y}`;
+for (let i = 1; i < all.length; i++) {
+  const a = all[i - 1], b = all[i];
+  const my = (a.y + b.y) / 2;
+  meander += ` C${a.x} ${my} ${b.x} ${my} ${b.x} ${b.y}`;
+}
+const height = end.y + 60;
+const caption = `${flow.manualSteps.join(', then ')}. With DreamLogic: ${flow.doneLines.join(' ')}`;
+---
+<figure class="flow" data-flow aria-label="A manual process replaced by one automated line">
+  <svg viewBox={`0 0 420 ${height}`} aria-hidden="true">
+    <g class="manual">
+      <path class="meander" d={meander} />
+      {pts.map((p, i) => (
+        <g>
+          <circle cx={p.x} cy={p.y} r="7" class:list={['node', { start: i === 0 }]} />
+          <text x={p.x + 20} y={p.y + 6}>{p.label}</text>
+        </g>
+      ))}
+    </g>
+    <path class="direct" d={`M24 30 V${end.y}`} pathLength="1" />
+    <circle class="node start" cx="24" cy="30" r="7" />
+    <text class="first" x="44" y="36">{pts[0].label}</text>
+    <g class="result">
+      <circle cx="24" cy={end.y} r="9" class="done" />
+      <text x="46" y={end.y + 7} class="done-label">{flow.doneLabel}</text>
+      {flow.doneLines.map((line, i) => (
+        <text x="46" y={end.y + 36 + i * 22} class="sub">{line}</text>
+      ))}
+    </g>
+  </svg>
+  <figcaption class="sr-only">{caption}</figcaption>
+</figure>
+
+<script>
+  // Play the animation once, when the diagram is mostly on screen.
+  const el = document.querySelector<HTMLElement>('[data-flow]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (el && !reduce && 'IntersectionObserver' in window) {
+    el.classList.add('wait');
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        el.classList.replace('wait', 'play');
+        io.disconnect();
+      }
+    }, { threshold: 0.85 });
+    io.observe(el);
+  }
+</script>
+
+<style>
+  .flow { width: 100%; max-width: 27rem; margin: 0; }
+  svg { width: 100%; height: auto; overflow: visible; }
+  text { fill: var(--mist); font: 400 17px Outfit, system-ui, sans-serif; }
+  .meander { fill: none; stroke: var(--steel); stroke-width: 2px; stroke-dasharray: 3 7; stroke-linecap: round; }
+  .node { fill: var(--navy); stroke: var(--slate); stroke-width: 2px; }
+  .node.start { fill: var(--slate); }
+  .first { fill: #fff; font-weight: 500; }
+  .manual { opacity: 0.38; }
+  .direct { fill: none; stroke: var(--orange); stroke-width: 4px; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
+  .done { fill: var(--orange); }
+  .done-label { fill: #fff; font-size: 22px; font-weight: 600; }
+  .sub { fill: var(--slate); font-size: 16px; }
+
+  .flow.wait .manual { opacity: 1; }
+  .flow.wait .result { opacity: 0; }
+  .flow.wait .direct { stroke-dashoffset: 1px; }
+  .flow.play .manual { animation: dim 0.8s 1.9s backwards; }
+  .flow.play .direct { animation: draw 1.3s cubic-bezier(0.6, 0, 0.2, 1) 0.7s backwards; }
+  .flow.play .result { animation: appear 0.7s 1.9s backwards; }
+  @keyframes dim { from { opacity: 1; } }
+  @keyframes draw { from { stroke-dashoffset: 1px; } }
+  @keyframes appear { from { opacity: 0; transform: translateY(6px); } }
+</style>

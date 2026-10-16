@@ -1,0 +1,208 @@
+---
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+import FlowDiagram from '../components/FlowDiagram.astro';
+import {
+  site, nav, hero, work, engage, principles, about, contact, footer, mailto,
+} from '../data/site';
+
+const year = new Date().getFullYear();
+---
+<Base>
+  <header class="hero">
+    <nav class="wrap topbar" aria-label="Main">
+      <a href="#main" class="home" aria-label={`${site.name} home`}><Logo /></a>
+      <ul>
+        {nav.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+      </ul>
+    </nav>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>{hero.heading}</h1>
+        <p class="lead">{hero.lead}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href={mailto(hero.primaryCta.subject)}>{hero.primaryCta.label}</a>
+          <a class="btn btn-ghost" href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
+        </div>
+      </div>
+      <FlowDiagram />
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="work" class="work">
+      <div class="wrap">
+        <h2>{work.heading}</h2>
+        <p class="intro">{work.intro}</p>
+        <div class="table" role="table" aria-label="Examples by sector">
+          <div class="row head" role="row">
+            <span role="columnheader">{work.columns.sector}</span>
+            <span role="columnheader">{work.columns.byHand}</span>
+            <span role="columnheader">{work.columns.automated}</span>
+          </div>
+          {work.rows.map((r) => (
+            <div class="row" role="row">
+              <h3 role="rowheader">{r.sector}</h3>
+              <p role="cell" class="by-hand"><span class="mlabel">By hand: </span>{r.byHand}</p>
+              <p role="cell" class="automated"><span class="mlabel">Automated: </span>{r.automated}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="engage" class="engage">
+      <div class="wrap">
+        <h2>{engage.heading}</h2>
+        <p class="intro">{engage.intro}</p>
+        <ol class="steps">
+          {engage.steps.map((s, i) => (
+            <li class="step">
+              <span class="marker" aria-hidden="true">{i + 1}</span>
+              <h3>{s.name}</h3>
+              <p class="meta"><span>{s.duration}</span><strong>{s.price}</strong></p>
+              <p>{s.body}</p>
+              <p class="note">{s.note}</p>
+            </li>
+          ))}
+        </ol>
+        <p class="aside">{engage.aside}</p>
+      </div>
+    </section>
+
+    <section class="principles">
+      <div class="wrap principles-grid">
+        <h2>{principles.heading}</h2>
+        <dl>
+          {principles.items.map((p) => (
+            <div><dt>{p.title}</dt><dd>{p.body}</dd></div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="wrap about-grid">
+        <h2>{about.heading}</h2>
+        <div class="about-body">
+          {about.paragraphs.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>{contact.heading}</h2>
+        <p>{contact.body}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href={mailto(contact.cta.subject)}>{contact.cta.label}</a>
+          <a class="email" href={mailto()}>{site.email}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <Logo size={22} />
+      <p>{footer.tagline}</p>
+      <p>© {year} {site.name}</p>
+    </div>
+  </footer>
+</Base>
+
+<style>
+  /* Hero */
+  .hero {
+    background: radial-gradient(ellipse at 80% 20%, #2c3f4d 0%, var(--navy) 60%);
+    color: #f3f5f6;
+    padding-bottom: clamp(3rem, 8vw, 6rem);
+  }
+  .topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.25rem; }
+  .home { text-decoration: none; }
+  .topbar ul { display: flex; gap: clamp(1rem, 3vw, 2rem); margin: 0; padding: 0; list-style: none; font-size: 0.95rem; }
+  .topbar ul a { color: var(--mist); text-decoration: none; }
+  .topbar ul a:hover { color: #fff; }
+  @media (width <= 40rem) { .topbar ul li:not(:last-child) { display: none; } }
+
+  .hero-grid { display: grid; align-items: center; gap: 3rem; padding-top: clamp(2.5rem, 7vw, 5.5rem); }
+  @media (width >= 60rem) { .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 4rem; } }
+  .hero h1 { font-size: var(--step-4); font-weight: 300; letter-spacing: -0.035em; line-height: 1.02; max-width: 12ch; }
+  .lead { margin-top: 1.5rem; max-width: 34rem; font-size: var(--step-1); font-weight: 300; line-height: 1.5; color: var(--mist); }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 2.25rem; }
+
+  /* Shared section rhythm */
+  main section { padding-block: clamp(4rem, 9vw, 7rem); }
+  main h2 { font-size: var(--step-3); font-weight: 600; max-width: 22ch; }
+  .intro { margin-top: 1rem; max-width: 40rem; font-size: var(--step-1); font-weight: 300; color: var(--ink-2); }
+
+  /* What we automate */
+  .table { margin-top: 3rem; border-top: 1px solid var(--line); }
+  .row { display: grid; gap: 0.4rem 2.5rem; padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
+  .row h3 { font-size: var(--step-1); font-weight: 600; }
+  .row.head { display: none; }
+  .by-hand { color: var(--ink-2); }
+  .automated { color: var(--ink); }
+  .mlabel { font-weight: 500; }
+  .by-hand .mlabel { color: var(--ink-2); }
+  .automated .mlabel { color: var(--orange-ink); }
+  @media (width >= 52rem) {
+    .row { grid-template-columns: 12rem 1fr 1fr; align-items: baseline; }
+    .row.head { display: grid; padding-block: 0.9rem; font-size: 0.9rem; font-weight: 500; color: var(--ink-2); }
+    .row.head span:last-child { color: var(--orange-ink); }
+    .mlabel { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .automated { border-left: 3px solid var(--orange); padding-left: 1.25rem; }
+  }
+
+  /* Pricing steps */
+  .engage { background: var(--cloud); }
+  .steps { display: grid; gap: 2.5rem; margin: 3rem 0 0; padding: 0; list-style: none; }
+  .step { position: relative; padding-left: 3.5rem; }
+  .marker {
+    position: absolute; top: -0.2rem; left: 0;
+    display: grid; place-items: center; width: 2.25rem; height: 2.25rem;
+    border-radius: 50%; background: var(--navy); color: #fff; font-size: 1rem; font-weight: 600;
+  }
+  .step:last-child .marker { background: var(--orange); color: var(--navy); }
+  .step:not(:last-child)::after {
+    content: ''; position: absolute; top: 2.4rem; bottom: -2.3rem; left: calc(1.125rem - 1px);
+    width: 2px; background: var(--slate);
+  }
+  .step h3 { font-size: var(--step-2); font-weight: 600; }
+  .meta {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem;
+    margin: 0.6rem 0 0.9rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); color: var(--ink-2);
+  }
+  .meta strong { color: var(--ink); font-weight: 600; }
+  .note { margin-top: 0.75rem; font-size: 0.95rem; color: var(--ink-2); }
+  @media (width >= 60rem) {
+    .steps { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .step { padding-top: 3.75rem; padding-left: 0; }
+    .marker { top: 0; }
+    .step:not(:last-child)::after { inset: calc(1.125rem - 1px) -2.1rem auto 2.6rem; width: auto; height: 2px; }
+  }
+  .aside { margin-top: 3rem; max-width: 40rem; color: var(--ink-2); }
+
+  /* How we build / Who we are */
+  .principles-grid, .about-grid { display: grid; gap: 2.5rem; }
+  @media (width >= 60rem) { .principles-grid, .about-grid { grid-template-columns: 20rem 1fr; gap: 4rem; } }
+  dl { display: grid; gap: 2rem 3rem; margin: 0; }
+  @media (width >= 40rem) { dl { grid-template-columns: 1fr 1fr; } }
+  dt { font-size: var(--step-1); font-weight: 600; line-height: 1.3; }
+  dd { margin: 0.5rem 0 0; color: var(--ink-2); }
+  .about { border-top: 1px solid var(--line); }
+  .about-body { display: grid; gap: 1.25rem; max-width: 40rem; font-size: var(--step-1); font-weight: 300; line-height: 1.55; }
+
+  /* Contact */
+  .contact { background: var(--navy); color: #f3f5f6; }
+  .contact h2 { color: #fff; }
+  .contact p { margin-top: 1.25rem; max-width: 36rem; font-size: var(--step-1); font-weight: 300; color: var(--mist); }
+  .email { color: var(--mist); text-underline-offset: 4px; }
+  .email:hover { color: #fff; }
+
+  /* Footer */
+  .footer { background: var(--navy); color: var(--slate); border-top: 1px solid var(--navy-2); font-size: 0.9rem; }
+  .footer-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 2rem; padding-block: 1.75rem; }
+  .footer-row :global(.logo) { color: var(--mist); }
+  .footer-row p:last-child { margin-left: auto; }
+</style>

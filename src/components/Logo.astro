@@ -1,0 +1,23 @@
+---
+interface Props { size?: number }
+const { size = 28 } = Astro.props;
+---
+<span class="logo">
+  <svg width={size} height={size} viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+    <path d="M46 16H92a12 12 0 0 1 12 12V74" fill="none" stroke="currentColor" stroke-width="16" />
+    <path d="M16 46V92a12 12 0 0 0 12 12H74" fill="none" stroke="currentColor" stroke-width="16" />
+    <g fill="var(--orange)">
+      <rect x="40" y="30" width="14" height="36" />
+      <rect x="54" y="40" width="36" height="14" />
+      <rect x="66" y="54" width="14" height="36" />
+      <rect x="30" y="66" width="36" height="14" />
+    </g>
+  </svg>
+  <span class="word">Dream<b>Logic</b></span>
+</span>
+
+<style>
+  .logo { display: inline-flex; align-items: center; gap: 0.55rem; color: inherit; }
+  .word { font-size: 1.2rem; font-weight: 300; letter-spacing: -0.02em; }
+  .word b { font-weight: 600; }
+</style>

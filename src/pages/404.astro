@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+import { site } from '../data/site';
+---
+<Base title={`Page not found | ${site.name}`}>
+  <main id="main" class="nf">
+    <div class="wrap">
+      <a href="/" aria-label={`${site.name} home`}><Logo /></a>
+      <h1>That page doesn’t exist.</h1>
+      <p>The link may be out of date. The home page has everything we do and how to reach us.</p>
+      <a class="btn btn-primary" href="/">Go to the home page</a>
+    </div>
+  </main>
+</Base>
+<style>
+  .nf { min-height: 100vh; display: grid; align-items: center; background: var(--navy); color: #f3f5f6; }
+  .nf a:first-child { text-decoration: none; }
+  h1 { margin-top: 3rem; font-size: var(--step-3); font-weight: 300; }
+  p { margin: 1rem 0 2rem; max-width: 34rem; color: var(--mist); font-size: var(--step-1); font-weight: 300; }
+</style>
