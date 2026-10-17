@@ -111,8 +111,8 @@ export const principles = {
       body: 'You know the cost before we start. If the build takes longer than we estimated, that’s on us.',
     },
     {
-      title: 'Your data stays in New Zealand',
-      body: 'Workflows run in a New Zealand cloud region or on your own hardware. You choose.',
+      title: 'You know where your data goes',
+      body: 'We build on trusted global platforms where they’re the right tool. Before anything goes live, we map out what data goes where, and keep sensitive data in New Zealand or on your own hardware where it matters.',
     },
     {
       title: 'Works with the systems you have',
@@ -129,7 +129,8 @@ export const about = {
   heading: 'Who we are',
   paragraphs: [
     'DreamLogic is two senior solution architects based in Nelson. Between us we’ve designed and run the systems behind councils, utilities and health providers: the kind of infrastructure that isn’t allowed to fall over.',
-    'We started DreamLogic to bring that same discipline to automation, for businesses that don’t have an IT department to spare.',
+    'We started DreamLogic to help New Zealand businesses adopt AI properly: in the right places, at a sensible cost, and built with that same discipline.',
+    'We want to be the team businesses turn to when they’re ready to put AI to work, especially those that don’t have an IT department to spare.',
   ],
 };
 
