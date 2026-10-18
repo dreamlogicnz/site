@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { site, engage } from '../data/site';
+import { site, engage, banner } from '../data/site';
 
 interface Props { title?: string; description?: string }
 const { title = site.title, description = site.description } = Astro.props;
@@ -51,6 +51,7 @@ const jsonLd = {
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
+    {banner && <p class="banner">{banner}</p>}
     <slot />
   </body>
 </html>

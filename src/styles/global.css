@@ -68,3 +68,12 @@ img, svg { display: block; }
   html { scroll-behavior: auto; }
   *, ::before, ::after { transition: none !important; animation: none !important; }
 }
+
+.banner {
+  margin: 0;
+  padding: 0.6rem var(--gutter);
+  background: var(--orange);
+  color: var(--navy);
+  font-weight: 600;
+  text-align: center;
+}
