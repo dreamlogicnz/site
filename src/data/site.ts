@@ -8,7 +8,7 @@ export const site = {
   locality: 'Nelson',
   title: 'DreamLogic: Automation and integration for New Zealand businesses.',
   description:
-    'DreamLogic automates the repetitive work between your systems. Fixed price, live in weeks, and looked after by us once it is running. Hosted in New Zealand or on your own hardware.',
+    'DreamLogic automates the repetitive work between your systems. Fixed price, live in weeks, and looked after by us once it is running. And you’ll know exactly what data goes where before anything goes live.',
   // Staging: keep search engines out until launch. Flip to true when the domain goes live.
   indexable: false,
 };
