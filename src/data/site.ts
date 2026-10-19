@@ -14,7 +14,7 @@ export const site = {
 };
 
 // A one-line message across the top of every page. Set to null to remove it.
-export const banner: string | null = 'Hey mate, hope your Japan trip’s going well. Claude did this.';
+export const banner: string | null = null;
 
 export const nav = [
   { href: '#work', label: 'What we automate' },
