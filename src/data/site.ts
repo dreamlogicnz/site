@@ -144,7 +144,7 @@ export const contact = {
 };
 
 export const footer = {
-  tagline: 'Automation and integration from Nelson, New Zealand.',
+  tagline: 'Automation and integration from Nelson, New Zealand. [pipeline test]',
 };
 
 export const mailto = (subject?: string) =>
