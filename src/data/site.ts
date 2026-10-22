@@ -146,9 +146,19 @@ export const data = {
       body: 'Workflows and web pages run on established cloud infrastructure, behind its security and access controls.',
     },
     {
-      name: 'A secrets vault',
+      name: 'Encryption',
+      role: 'In transit and at rest',
+      body: 'Data is encrypted as it moves between systems and where it’s stored, using industry-standard methods, wherever the systems involved support it.',
+    },
+    {
+      name: 'Secrets vaults',
       role: 'Passwords and keys',
-      body: 'Logins and API keys live in a dedicated vault. Never in code, spreadsheets or email.',
+      body: 'Logins and API keys live in dedicated vaults. Never in code, spreadsheets or email.',
+    },
+    {
+      name: 'Least-privilege access',
+      role: 'Who can see what',
+      body: 'Every system, and every AI model, gets access to only what its job needs. Nothing more.',
     },
     {
       name: 'AI models',
