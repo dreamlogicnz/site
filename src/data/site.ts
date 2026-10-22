@@ -5,8 +5,7 @@ export const site = {
   name: 'DreamLogic',
   url: 'https://dreamlogic.co.nz',
   email: 'hello@dreamlogic.co.nz',
-  locality: 'Nelson',
-  title: 'DreamLogic: Automation and integration for New Zealand businesses.',
+  title: 'DreamLogic: Automation and integration. New Zealand owned and operated.',
   description:
     'DreamLogic automates the repetitive work between your systems. Fixed price, live in weeks, and looked after by us once it is running. And you’ll know exactly what data goes where before anything goes live.',
   // Staging: keep search engines out until launch. Flip to true when the domain goes live.
@@ -147,9 +146,19 @@ export const data = {
       body: 'Workflows and web pages run on established cloud infrastructure, behind its security and access controls.',
     },
     {
-      name: 'A secrets vault',
+      name: 'Encryption',
+      role: 'In transit and at rest',
+      body: 'Data is encrypted as it moves between systems and where it’s stored, using industry-standard methods, wherever the systems involved support it.',
+    },
+    {
+      name: 'Secrets vaults',
       role: 'Passwords and keys',
-      body: 'Logins and API keys live in a dedicated vault. Never in code, spreadsheets or email.',
+      body: 'Logins and API keys live in dedicated vaults. Never in code, spreadsheets or email.',
+    },
+    {
+      name: 'Least-privilege access',
+      role: 'Who can see what',
+      body: 'Every system, and every AI model, gets access to only what its job needs. Nothing more.',
     },
     {
       name: 'AI models',
@@ -173,9 +182,11 @@ export const data = {
 export const about = {
   heading: 'Who we are',
   paragraphs: [
-    'DreamLogic is two senior solution architects based in Nelson. Between us we’ve designed and run the systems behind councils, utilities and health providers: the kind of infrastructure that isn’t allowed to fall over.',
-    'We started DreamLogic to help New Zealand businesses adopt AI properly: in the right places, at a sensible cost, and built with that same discipline.',
-    'We want to be the team businesses turn to when they’re ready to put AI to work, especially those that don’t have an IT department to spare.',
+    'DreamLogic is New Zealand owned and operated, built from the ground up by two senior solution architects. We started it because we think businesses deserve better help with AI than they’re getting: used in the right places, at a sensible cost, and built properly.',
+    'Between us we’ve designed and run the systems behind councils, utilities and health providers across New Zealand and Australia, and for businesses with branches around the world. That’s infrastructure that isn’t allowed to fall over, and we bring the same care to every automation we build.',
+    'We run DreamLogic on the same AI and automation we build for our customers. We believe AI succeeds when it’s implemented properly, and we believe it enough to be an AI-first business ourselves. If it isn’t good enough for us, it isn’t good enough for you.',
+    'We want to be the team businesses turn to when they’re ready to put AI to work. If you have an IT team, we work alongside them and add to what they already know. If you don’t, we fill that gap. Either way, you’re talking to the people who build it.',
+    'We’re proud to be a Kiwi business, but we don’t think where you’re based should decide the quality of help you get. Whether you’re down the road or on the other side of the world, you should have access to the best in the business.',
   ],
 };
 
@@ -186,7 +197,7 @@ export const contact = {
 };
 
 export const footer = {
-  tagline: 'Automation and integration from Nelson, New Zealand.',
+  tagline: 'New Zealand owned and operated. Working with businesses wherever they are.',
 };
 
 export const mailto = (subject?: string) =>

@@ -12,8 +12,7 @@ const jsonLd = {
   url: site.url,
   email: site.email,
   description: site.description,
-  areaServed: { '@type': 'Country', name: 'New Zealand' },
-  address: { '@type': 'PostalAddress', addressLocality: site.locality, addressCountry: 'NZ' },
+  address: { '@type': 'PostalAddress', addressCountry: 'NZ' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Automation services',
