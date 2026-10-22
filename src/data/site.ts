@@ -5,7 +5,7 @@ export const site = {
   name: 'DreamLogic',
   url: 'https://dreamlogic.co.nz',
   email: 'hello@dreamlogic.co.nz',
-  title: 'DreamLogic: Automation and integration for businesses, wherever they are.',
+  title: 'DreamLogic: Automation and integration. New Zealand owned and operated.',
   description:
     'DreamLogic automates the repetitive work between your systems. Fixed price, live in weeks, and looked after by us once it is running. And you’ll know exactly what data goes where before anything goes live.',
   // Staging: keep search engines out until launch. Flip to true when the domain goes live.
@@ -182,10 +182,10 @@ export const data = {
 export const about = {
   heading: 'Who we are',
   paragraphs: [
-    'DreamLogic is two senior solution architects. Between us we’ve designed and run the systems behind councils, utilities and health providers across New Zealand and Australia, and for businesses with branches around the world: the kind of infrastructure that isn’t allowed to fall over.',
-    'We started DreamLogic to help businesses adopt AI properly: in the right places, at a sensible cost, and built with that same discipline.',
-    'We want to be the team businesses turn to when they’re ready to put AI to work, especially those that don’t have an IT department to spare.',
-    'Where you’re based shouldn’t decide the quality of help you get. Wherever you are, you should have access to the best in the business.',
+    'DreamLogic is New Zealand owned and operated, built from the ground up by two senior solution architects. We started it because we think businesses deserve better help with AI than they’re getting: used in the right places, at a sensible cost, and built properly.',
+    'Between us we’ve designed and run the systems behind councils, utilities and health providers across New Zealand and Australia, and for businesses with branches around the world. That’s infrastructure that isn’t allowed to fall over, and we bring the same care to every automation we build.',
+    'We want to be the team businesses turn to when they’re ready to put AI to work, especially those without an IT department to spare. When you work with us, you’re talking to the people who build it.',
+    'We’re proud to be a Kiwi business, but we don’t think where you’re based should decide the quality of help you get. Whether you’re down the road or on the other side of the world, you should have access to the best in the business.',
   ],
 };
 
@@ -196,7 +196,7 @@ export const contact = {
 };
 
 export const footer = {
-  tagline: 'Automation and integration, wherever your business is.',
+  tagline: 'New Zealand owned and operated. Working with businesses wherever they are.',
 };
 
 export const mailto = (subject?: string) =>
