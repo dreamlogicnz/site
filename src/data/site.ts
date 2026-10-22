@@ -19,6 +19,7 @@ export const banner: string | null = null;
 export const nav = [
   { href: '#work', label: 'What we automate' },
   { href: '#engage', label: 'Pricing' },
+  { href: '#data', label: 'Data and security' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -124,6 +125,47 @@ export const principles = {
     {
       title: 'No lock-in',
       body: 'Built on open tools and models we can swap out. If you want to take it in-house, you get everything.',
+    },
+  ],
+};
+
+// For procurement and IT teams: what runs where, and what they get in writing.
+export const data = {
+  heading: 'Data and security',
+  intro:
+    'If you have a procurement or IT team, these are the questions they’ll ask. Here are the answers, before you have to ask.',
+  stackHeading: 'What we build on',
+  stack: [
+    {
+      name: 'GitHub',
+      role: 'Code and change history',
+      body: 'Every change to your automation is reviewed and recorded. If you take it in-house, the repository comes with it.',
+    },
+    {
+      name: 'Cloudflare',
+      role: 'Hosting and automations',
+      body: 'Workflows and web pages run on Cloudflare’s network, behind its security and access controls.',
+    },
+    {
+      name: 'Bitwarden Secrets Manager',
+      role: 'Passwords and keys',
+      body: 'Logins and API keys live in a secrets vault. Never in code, spreadsheets or email.',
+    },
+    {
+      name: 'AI models',
+      role: 'Chosen per job',
+      body: 'We tell you which provider sees which data. Where it matters, sensitive data stays in New Zealand or on your own hardware.',
+    },
+  ],
+  writingHeading: 'What you get in writing',
+  writing: [
+    {
+      title: 'A statement of work',
+      body: 'Scope, price, timeline and what “done” means, signed before we start.',
+    },
+    {
+      title: 'A data map',
+      body: 'What data the automation touches, which systems it passes through, and which country each one is in. Agreed before anything goes live.',
     },
   ],
 };
