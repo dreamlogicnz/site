@@ -99,7 +99,7 @@ export const engage = {
       duration: 'Monthly',
       price: 'From $800 a month',
       body: 'We monitor it, fix it, make changes as your business moves, and report the hours it saved.',
-      note: 'Twelve-month term, then month to month.',
+      note: 'Twelve-month term, renewing annually.',
     },
   ],
   aside:
