@@ -134,22 +134,22 @@ export const data = {
   heading: 'Data and security',
   intro:
     'If you have a procurement or IT team, these are the questions they’ll ask. Here are the answers, before you have to ask.',
-  stackHeading: 'What we build on',
+  stackHeading: 'How we keep it safe',
   stack: [
     {
-      name: 'GitHub',
+      name: 'Reviewed changes',
       role: 'Code and change history',
-      body: 'Every change to your automation is reviewed and recorded. If you take it in-house, the repository comes with it.',
+      body: 'Every change to your automation is reviewed and recorded. If you take it in-house, the full history comes with it.',
     },
     {
-      name: 'Cloudflare',
-      role: 'Hosting and automations',
-      body: 'Workflows and web pages run on Cloudflare’s network, behind its security and access controls.',
+      name: 'Secure hosting',
+      role: 'Where it runs',
+      body: 'Workflows and web pages run on proven cloud infrastructure, behind its security and access controls.',
     },
     {
-      name: 'Bitwarden Secrets Manager',
+      name: 'A secrets vault',
       role: 'Passwords and keys',
-      body: 'Logins and API keys live in a secrets vault. Never in code, spreadsheets or email.',
+      body: 'Logins and API keys live in a dedicated vault. Never in code, spreadsheets or email.',
     },
     {
       name: 'AI models',
