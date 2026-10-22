@@ -133,7 +133,7 @@ export const principles = {
 export const data = {
   heading: 'Data and security',
   intro:
-    'If you have a procurement or IT team, these are the questions they’ll ask. Here are the answers, before you have to ask.',
+    'Security and AI aren’t a trade-off. We design every automation with both in mind from the first conversation, using proven practices, so you get the benefit of AI and stay in control of your data.',
   stackHeading: 'How we keep it safe',
   stack: [
     {
@@ -144,7 +144,7 @@ export const data = {
     {
       name: 'Secure hosting',
       role: 'Where it runs',
-      body: 'Workflows and web pages run on proven cloud infrastructure, behind its security and access controls.',
+      body: 'Workflows and web pages run on established cloud infrastructure, behind its security and access controls.',
     },
     {
       name: 'A secrets vault',
