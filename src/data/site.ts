@@ -5,8 +5,7 @@ export const site = {
   name: 'DreamLogic',
   url: 'https://dreamlogic.co.nz',
   email: 'hello@dreamlogic.co.nz',
-  locality: 'Nelson',
-  title: 'DreamLogic: Automation and integration for New Zealand businesses.',
+  title: 'DreamLogic: Automation and integration for businesses, wherever they are.',
   description:
     'DreamLogic automates the repetitive work between your systems. Fixed price, live in weeks, and looked after by us once it is running. And you’ll know exactly what data goes where before anything goes live.',
   // Staging: keep search engines out until launch. Flip to true when the domain goes live.
@@ -173,9 +172,10 @@ export const data = {
 export const about = {
   heading: 'Who we are',
   paragraphs: [
-    'DreamLogic is two senior solution architects based in Nelson. Between us we’ve designed and run the systems behind councils, utilities and health providers: the kind of infrastructure that isn’t allowed to fall over.',
-    'We started DreamLogic to help New Zealand businesses adopt AI properly: in the right places, at a sensible cost, and built with that same discipline.',
+    'DreamLogic is two senior solution architects. Between us we’ve designed and run the systems behind councils, utilities and health providers across New Zealand and Australia, and for businesses with branches around the world: the kind of infrastructure that isn’t allowed to fall over.',
+    'We started DreamLogic to help businesses adopt AI properly: in the right places, at a sensible cost, and built with that same discipline.',
     'We want to be the team businesses turn to when they’re ready to put AI to work, especially those that don’t have an IT department to spare.',
+    'Where you’re based shouldn’t decide the quality of help you get. Wherever you are, you should have access to the best in the business.',
   ],
 };
 
@@ -186,7 +186,7 @@ export const contact = {
 };
 
 export const footer = {
-  tagline: 'Automation and integration from Nelson, New Zealand.',
+  tagline: 'Automation and integration, wherever your business is.',
 };
 
 export const mailto = (subject?: string) =>
