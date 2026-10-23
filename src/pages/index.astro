@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Logo from '../components/Logo.astro';
+import DataDiagram from '../components/DataDiagram.astro';
 import FlowDiagram from '../components/FlowDiagram.astro';
 import {
   site, nav, hero, why, work, engage, principles, data, about, contact, footer, mailto,
@@ -35,6 +36,7 @@ const year = new Date().getFullYear();
         <h2>{why.heading}</h2>
         <div class="why-body">
           {why.paragraphs.map((p) => <p>{p}</p>)}
+          <DataDiagram />
         </div>
       </div>
     </section>
