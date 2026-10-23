@@ -45,54 +45,33 @@ export const flow = {
 export const work = {
   heading: 'The work nobody should be doing twice',
   intro:
-    'Built for businesses with five or more people, where the same repetitive job is eating hours every week. These are the jobs we see most.',
-  columns: { sector: 'The job', byHand: 'Done by hand today', automated: 'Once it’s automated' },
+    'Built for organisations with five or more people, where the same repetitive job is eating hours every week. These are the ones we hear about most.',
+  columns: { sector: 'Sector', byHand: 'Done by hand today', automated: 'Once it’s automated' },
   rows: [
     {
-      sector: 'Supplier invoices',
-      byHand: 'Invoices opened from email, retyped into the accounts and checked against orders one at a time.',
-      automated: 'Invoices read, coded and posted to your accounts. Only the odd ones reach a person.',
+      sector: 'Horticulture',
+      byHand: 'Harvest and pack-out numbers retyped from packhouse reports into grower statements.',
+      automated: 'Reports pulled in as they land. Statements built, checked and sent on schedule.',
     },
     {
-      sector: 'Customer enquiries',
-      byHand: 'Emails and web forms read, sorted and forwarded to the right person by hand.',
-      automated: 'Enquiries sorted, summarised and routed before anyone opens them.',
+      sector: 'Agriculture',
+      byHand: 'Supplier invoices and compliance records keyed into farm software one at a time.',
+      automated: 'Invoices read, coded and posted. Records filed where the auditor expects them.',
     },
     {
-      sector: 'Quotes and job sheets',
-      byHand: 'The same customer and job details typed into the quote, the schedule and the invoice.',
-      automated: 'Details captured once, then flowing through to scheduling and invoicing.',
+      sector: 'Insurance',
+      byHand: 'Premium payments and broker remittances allocated to policies line by line, with unmatched cash chased at month end.',
+      automated: 'Every payment allocated to the right policy as it lands. Only the ones that don’t match reach a person.',
     },
     {
-      sector: 'Orders and stock',
-      byHand: 'Online orders rekeyed into stock and accounts at the end of the day.',
-      automated: 'Every order updates stock and accounts as it comes in. No retyping.',
+      sector: 'Logistics',
+      byHand: 'Proof-of-delivery photos and carrier invoices matched by hand at month end.',
+      automated: 'Every delivery matched as it happens. Only the mismatches go to a person.',
     },
     {
-      sector: 'Month-end matching',
-      byHand: 'Payments, deliveries and invoices matched by hand in a rush at month end.',
-      automated: 'Everything matched as it happens. Only the mismatches go to a person.',
-    },
-  ],
-};
-
-// Real automations DreamLogic runs on its own work. Keep these true and measured.
-export const ours = {
-  heading: 'What we run ourselves',
-  intro:
-    'We don’t ask you to trust anything we don’t use every day. In each of these, AI applies clear rules and makes the call, and a person only steps in when something looks off.',
-  items: [
-    {
-      title: 'Timesheets that write themselves',
-      body: 'Every week, AI pulls together calendars, email, chat, calls and vehicle mileage, drafts the timesheet notes and reconciles the lot. It saves four hours per person, every week. In a team of 40, that’s four full-time people’s worth of time back.',
-    },
-    {
-      title: 'Your bank feed, watched daily',
-      body: 'Every transaction is checked as it lands. Payments are matched to invoices, late payers are flagged or chased, unusual spending is caught, and a weekly cash-flow summary arrives with any red flags. We run this on our own finances every day.',
-    },
-    {
-      title: 'Deciding when to run equipment',
-      body: 'Local weather stations, forecasts and history are checked against proven frost, dew and growth measures, and AI decides whether a run is worth it. Fewer wasted runs, less wear and less power.',
+      sector: 'Councils and utilities',
+      byHand: 'Alarms, logs and site reports reviewed after the fact, and resilience and security reviews pieced together from scattered data.',
+      automated: 'AI watches operational data read-only, flags anomalies and drafts the review findings. Nothing it does touches control systems.',
     },
   ],
 };
@@ -100,7 +79,7 @@ export const ours = {
 export const engage = {
   heading: 'Three steps, each with a fixed price',
   intro:
-    'Start small, prove the saving, then let us run it. Four hours a week each, across five people, is around 1,000 hours a year. Prices are in NZD and exclude GST.',
+    'Start small, prove the saving, then let us run it. Save four hours a week for each of five people, and that’s around 1,000 hours a year. Prices are in NZD and exclude GST.',
   steps: [
     {
       name: 'Automation Check',
@@ -142,6 +121,10 @@ export const principles = {
     {
       title: 'Works with the systems you have',
       body: 'We use proper integrations where they exist. Where they don’t, our automation can work through the software’s screens just like your team does, so older systems can join in too.',
+    },
+    {
+      title: 'AI on your own hardware',
+      body: 'Where your data can’t leave the building, we set up and run AI models on your own equipment, sized to the job and looked after like everything else we build.',
     },
     {
       title: 'You own what we build',
@@ -206,7 +189,7 @@ export const about = {
   paragraphs: [
     'DreamLogic is New Zealand owned and operated, built from the ground up by two senior solution architects. We started it because we think businesses deserve better help with AI than they’re getting: used in the right places, at a sensible cost, and built properly.',
     'Between us we’ve spent our careers designing and running systems behind essential services, the kind that aren’t allowed to fall over. We bring that same care to every automation, whatever the size of the business.',
-    'We run DreamLogic on the same AI and automation we build for our customers. We believe AI succeeds when it’s implemented properly, and we believe it enough to be an AI-first business ourselves. If it isn’t good enough for us, it isn’t good enough for you.',
+    'We run DreamLogic on the same AI and automation we build for our customers, from timesheets to finance reporting. It saves each of us hours every week. If it isn’t good enough for us, it isn’t good enough for you.',
     'We want to be the team businesses turn to when they’re ready to put AI to work. If you have an IT team, we work alongside them and add to what they already know. If you don’t, we fill that gap. Either way, you’re talking to the people who build it.',
     'We’re proud to be a Kiwi business, but we don’t think where you’re based should decide the quality of help you get. Whether you’re down the road or on the other side of the world, you should have access to the best in the business.',
   ],
