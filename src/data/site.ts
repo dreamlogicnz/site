@@ -47,7 +47,7 @@ export const why = {
   heading: 'AI is only as good as the data you give it',
   paragraphs: [
     'AI is remarkably good at spotting patterns, reasoning through messy information and making judgement calls. But in most businesses, the data it needs is scattered across inboxes, spreadsheets, job systems and accounts, and nothing brings it together.',
-    'That’s the gap we fill. We connect your systems, bring the data together cleanly and put AI to work on it, so it can analyse, judge and act on your real business, not just answer questions in a chat window.',
+    'That’s the gap we fill. We connect your systems, bring the data together cleanly and put AI to work on it, so it can analyse, recommend and act on your real business, within limits you set, not just answer questions in a chat window.',
   ],
   // Diagram under the paragraphs. Four sources and three outcomes is the designed fit.
   diagram: {
@@ -57,8 +57,8 @@ export const why = {
     ai: 'AI',
     outputs: [
       { title: 'Analyse', body: 'Spots patterns' },
-      { title: 'Judge', body: 'Makes the call' },
-      { title: 'Act', body: 'Gets it done' },
+      { title: 'Recommend', body: 'Shows its reasoning' },
+      { title: 'Act', body: 'Within limits you set' },
     ],
   },
 };
@@ -66,7 +66,7 @@ export const why = {
 export const work = {
   heading: 'The work nobody should be doing twice',
   intro:
-    'Built for organisations with five or more people, where the same repetitive job is eating hours every week. These are the ones we hear about most.',
+    'Built for organisations of 5 to 500 people, where the same repetitive job is eating hours every week. These are the ones we hear about most.',
   columns: { sector: 'Sector', byHand: 'Done by hand today', automated: 'Once it’s automated' },
   rows: [
     {
@@ -237,6 +237,44 @@ export const contact = {
   ],
   cta: { label: 'Book a free first call', subject: 'First call' },
   emailBody: 'Business name:\n\nIndustry:\n\nThe job I’d automate first:\n\nRoughly how many people do it:\n\nThe systems involved:\n\nAnything else you’d like help with:\n',
+};
+
+// Privacy page (/privacy). Plain-English; have it checked before relying on it.
+export const privacy = {
+  title: 'Privacy',
+  updated: 'October 2026',
+  intro:
+    'We help organisations look after their data, so we take care of yours. This page explains what we collect through this website and how we handle it, in line with the New Zealand Privacy Act 2020.',
+  sections: [
+    {
+      heading: 'What we collect',
+      body: [
+        'This website doesn’t use cookies, analytics or advertising trackers, and it has no forms. We don’t build profiles of visitors.',
+        'Like any website, the service that hosts it records basic technical details of each visit, such as your IP address, browser and the page requested. These are used only to keep the site secure and working.',
+        'If you email us, we receive what you choose to send: usually your name, email address, organisation and a description of the work you’d like help with.',
+      ],
+    },
+    {
+      heading: 'How we use it',
+      body: [
+        'We use what you send us to reply, to understand whether we can help, and to prepare a quote. We don’t sell or rent your information, and we don’t add you to marketing lists.',
+      ],
+    },
+    {
+      heading: 'Where it’s stored',
+      body: [
+        'Our email and website run on established global providers, so your information may be stored or processed outside New Zealand. We choose providers with strong security and privacy safeguards, and we keep only what we need for as long as we need it.',
+        'Data from customer projects is handled under the statement of work and data map we agree with each customer, not this page.',
+      ],
+    },
+    {
+      heading: 'Your rights',
+      body: [
+        'You can ask to see the personal information we hold about you, ask us to correct it, or ask us to delete it. Email us and we’ll respond within 20 working days.',
+        'If you’re not happy with how we’ve handled your information, please tell us first. You can also complain to the Office of the Privacy Commissioner at privacy.org.nz.',
+      ],
+    },
+  ],
 };
 
 export const footer = {
