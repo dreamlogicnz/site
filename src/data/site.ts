@@ -150,10 +150,6 @@ export const principles = {
       title: 'AI on your own hardware',
       body: 'Where data can’t leave the building, we run AI models on your own equipment and look after them like everything else we build.',
     },
-    {
-      title: 'You own what we build',
-      body: 'Open tools and models we can swap out, with every change recorded. If you’d rather run it yourselves after a term, we’ll hand over the code, history and documentation, and walk your team through it.',
-    },
   ],
 };
 
