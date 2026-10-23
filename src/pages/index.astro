@@ -21,7 +21,7 @@ const year = new Date().getFullYear();
         <h1>{hero.heading}</h1>
         <p class="lead">{hero.lead}</p>
         <div class="actions">
-          <a class="btn btn-primary" href={mailto(hero.primaryCta.subject)}>{hero.primaryCta.label}</a>
+          <a class="btn btn-primary" href="#contact">{hero.primaryCta.label}</a>
           <a class="btn btn-ghost" href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
         </div>
       </div>
@@ -129,8 +129,16 @@ const year = new Date().getFullYear();
       <div class="wrap">
         <h2>{contact.heading}</h2>
         <p>{contact.body}</p>
+        <ol class="next-steps">
+          {contact.steps.map((st) => (
+            <li>
+              <h3>{st.title}</h3>
+              <p>{st.body}</p>
+            </li>
+          ))}
+        </ol>
         <div class="actions">
-          <a class="btn btn-primary" href={mailto(contact.cta.subject)}>{contact.cta.label}</a>
+          <a class="btn btn-primary" href={mailto(contact.cta.subject, contact.emailBody)}>{contact.cta.label}</a>
           <a class="email" href={mailto()}>{site.email}</a>
         </div>
       </div>
@@ -252,6 +260,12 @@ const year = new Date().getFullYear();
   /* Contact */
   .contact { background: var(--navy); color: #f3f5f6; }
   .contact h2 { color: #fff; }
+  .next-steps { margin: 2.5rem 0 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 1.5rem; max-width: 60rem; }
+  @media (width >= 48rem) { .next-steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+  .next-steps li { counter-increment: step; border-top: 1px solid rgba(255,255,255,0.18); padding-top: 1rem; }
+  .next-steps li::before { content: counter(step); display: block; font-size: var(--step-0); font-weight: 600; color: var(--orange); margin-bottom: 0.5rem; }
+  .next-steps h3 { color: #fff; font-size: var(--step-1); font-weight: 600; line-height: 1.3; }
+  .contact .next-steps p { margin-top: 0.4rem; font-size: var(--step-0); }
   .contact p { margin-top: 1.25rem; max-width: 36rem; font-size: var(--step-1); font-weight: 300; color: var(--mist); }
   .email { color: var(--mist); text-underline-offset: 4px; }
   .email:hover { color: #fff; }
