@@ -163,7 +163,7 @@ export const data = {
     {
       name: 'Reviewed changes',
       role: 'Code and change history',
-      body: 'Every change is reviewed and recorded, and the full history comes with it if you take it in-house.',
+      body: 'Every change is reviewed and recorded, so there’s always a full history of what we’ve built for you. Your data is always yours.',
     },
     {
       name: 'Secure hosting',
