@@ -42,26 +42,45 @@ export const flow = {
   doneLines: ['Runs on its own.', 'Only the exceptions reach a person.'],
 };
 
+// Why AI needs DreamLogic: the data problem. Sits between the hero and the sectors.
+export const why = {
+  heading: 'AI is only as good as the data you give it',
+  paragraphs: [
+    'AI is remarkably good at spotting patterns, reasoning through messy information and making judgement calls. But in most businesses, the data it needs is scattered across inboxes, spreadsheets, job systems and accounts, and nothing brings it together.',
+    'That’s the gap we fill. We connect your systems, bring the data together cleanly and put AI to work on it, so it can analyse, judge and act on your real business, not just answer questions in a chat window.',
+  ],
+};
+
 export const work = {
   heading: 'The work nobody should be doing twice',
   intro:
-    'Every business has a job someone does by hand because two systems don’t talk. These are the ones we hear about most.',
+    'Built for organisations with five or more people, where the same repetitive job is eating hours every week. These are the ones we hear about most.',
   columns: { sector: 'Sector', byHand: 'Done by hand today', automated: 'Once it’s automated' },
   rows: [
     {
-      sector: 'Horticulture',
-      byHand: 'Harvest and pack-out numbers retyped from packhouse reports into grower statements.',
-      automated: 'Reports pulled in as they land. Statements built, checked and sent on schedule.',
+      sector: 'Trades and field services',
+      byHand: 'Technicians’ hours, job notes and travel retyped from job sheets into the job system, timesheets and invoices.',
+      automated: 'Jobs, hours and travel reconciled automatically. Timesheets and invoices drafted and ready to send.',
     },
     {
-      sector: 'Agriculture',
-      byHand: 'Supplier invoices and compliance records keyed into farm software one at a time.',
-      automated: 'Invoices read, coded and posted. Records filed where the auditor expects them.',
+      sector: 'Primary industries',
+      byHand: 'Harvest, pack-out and compliance records retyped from reports into grower statements, farm software and audit files.',
+      automated: 'Reports pulled in as they land. Statements built and sent, and records filed where the auditor expects them.',
     },
     {
-      sector: 'Insurance',
-      byHand: 'Broker submissions rekeyed from emails and PDFs into the underwriting system.',
-      automated: 'Submissions read and checked. The risk lands in your system ready to quote.',
+      sector: 'Manufacturing and distribution',
+      byHand: 'Purchase orders, stock levels and quality records keyed between supplier emails, the production floor and the accounts.',
+      automated: 'Orders, stock and quality records flowing between systems as they change. Shortfalls flagged before they hold up a job.',
+    },
+    {
+      sector: 'Finance and insurance',
+      byHand: 'Premiums, repayments and broker remittances allocated to policies and accounts line by line, with unmatched cash chased at month end.',
+      automated: 'Every payment allocated to the right policy or account as it lands. Only the ones that don’t match reach a person.',
+    },
+    {
+      sector: 'Professional services',
+      byHand: 'Billable time pieced together from calendars and email, and client documents chased, sorted and filed by hand.',
+      automated: 'Time drafted from the work as it happens. Client documents collected, checked and filed, ready for review.',
     },
     {
       sector: 'Logistics',
@@ -69,16 +88,22 @@ export const work = {
       automated: 'Every delivery matched as it happens. Only the mismatches go to a person.',
     },
     {
-      sector: 'Councils and utilities',
-      byHand: 'Requests arriving by email, phone and web form, triaged into queues by a person.',
-      automated: 'Requests classified and routed with a summary attached, before anyone opens them.',
+      sector: 'Councils',
+      byHand: 'Rates queries, consent questions and service requests arriving by email, phone and web form, triaged into queues by a person.',
+      automated: 'Requests classified, checked against the property record and routed with a summary attached, before anyone opens them.',
+    },
+    {
+      sector: 'Utilities',
+      byHand: 'Network alarms, logs and site reports reviewed after the fact, and resilience and security reviews pieced together from scattered data.',
+      automated: 'AI watches operational data read-only, flags anomalies and drafts the review findings. Nothing it does touches control systems.',
     },
   ],
 };
 
 export const engage = {
   heading: 'Three steps, each with a fixed price',
-  intro: 'Start small, prove the saving, then let us run it. Prices are in NZD and exclude GST.',
+  intro:
+    'Start small, prove the saving, then let us run it. Save four hours a week for each of five people, and that’s around 1,000 hours a year. Prices are in NZD and exclude GST.',
   steps: [
     {
       name: 'Automation Check',
@@ -119,11 +144,15 @@ export const principles = {
     },
     {
       title: 'Works with the systems you have',
-      body: 'We use proper integrations where they exist. Where they don’t, we drive the screen the way your team does.',
+      body: 'We use proper integrations where they exist. Where they don’t, our automation can work through the software’s screens just like your team does, so older systems can join in too.',
     },
     {
-      title: 'No lock-in',
-      body: 'Built on open tools and models we can swap out. If you want to take it in-house, you get everything.',
+      title: 'AI on your own hardware',
+      body: 'Where your data can’t leave the building, we set up and run AI models on your own equipment, sized to the job and looked after like everything else we build.',
+    },
+    {
+      title: 'You own what we build',
+      body: 'We use open tools and models we can swap out, and every change is recorded. If you’d rather run it yourselves at the end of a term, we’ll hand it over properly: the code, the history, the documentation, and a walkthrough with your team.',
     },
   ],
 };
@@ -183,8 +212,8 @@ export const about = {
   heading: 'Who we are',
   paragraphs: [
     'DreamLogic is New Zealand owned and operated, built from the ground up by two senior solution architects. We started it because we think businesses deserve better help with AI than they’re getting: used in the right places, at a sensible cost, and built properly.',
-    'Between us we’ve designed and run the systems behind councils, utilities and health providers across New Zealand and Australia, and for businesses with branches around the world. That’s infrastructure that isn’t allowed to fall over, and we bring the same care to every automation we build.',
-    'We run DreamLogic on the same AI and automation we build for our customers. We believe AI succeeds when it’s implemented properly, and we believe it enough to be an AI-first business ourselves. If it isn’t good enough for us, it isn’t good enough for you.',
+    'Between us we’ve spent our careers designing and running systems behind essential services, the kind that aren’t allowed to fall over. We bring that same care to every automation, whatever the size of the business.',
+    'We run DreamLogic on the same AI and automation we build for our customers, from timesheets to finance reporting. It saves each of us hours every week. If it isn’t good enough for us, it isn’t good enough for you.',
     'We want to be the team businesses turn to when they’re ready to put AI to work. If you have an IT team, we work alongside them and add to what they already know. If you don’t, we fill that gap. Either way, you’re talking to the people who build it.',
     'We’re proud to be a Kiwi business, but we don’t think where you’re based should decide the quality of help you get. Whether you’re down the road or on the other side of the world, you should have access to the best in the business.',
   ],
