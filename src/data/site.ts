@@ -68,9 +68,19 @@ export const work = {
       automated: 'Reports pulled in as they land. Statements built and sent, and records filed where the auditor expects them.',
     },
     {
+      sector: 'Manufacturing and distribution',
+      byHand: 'Purchase orders, stock levels and quality records keyed between supplier emails, the production floor and the accounts.',
+      automated: 'Orders, stock and quality records flowing between systems as they change. Shortfalls flagged before they hold up a job.',
+    },
+    {
       sector: 'Finance and insurance',
       byHand: 'Premiums, repayments and broker remittances allocated to policies and accounts line by line, with unmatched cash chased at month end.',
       automated: 'Every payment allocated to the right policy or account as it lands. Only the ones that don’t match reach a person.',
+    },
+    {
+      sector: 'Professional services',
+      byHand: 'Billable time pieced together from calendars and email, and client documents chased, sorted and filed by hand.',
+      automated: 'Time drafted from the work as it happens. Client documents collected, checked and filed, ready for review.',
     },
     {
       sector: 'Logistics',
