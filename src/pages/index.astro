@@ -151,7 +151,7 @@ const year = new Date().getFullYear();
     <div class="wrap footer-row">
       <Logo size={22} />
       <p>{footer.tagline}</p>
-      <p>© {year} {site.name}</p>
+      <p><a href="/privacy">Privacy</a> · © {year} {site.name}</p>
     </div>
   </footer>
 </Base>
@@ -277,4 +277,5 @@ const year = new Date().getFullYear();
   .footer-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 2rem; padding-block: 1.75rem; }
   .footer-row :global(.logo) { color: var(--mist); }
   .footer-row p:last-child { margin-left: auto; }
+  .footer-row a { color: var(--mist); }
 </style>

@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+import { site, privacy, mailto } from '../data/site';
+const year = new Date().getFullYear();
+---
+<Base title={`${privacy.title} | ${site.name}`} description={`How ${site.name} handles personal information.`}>
+  <header class="ph">
+    <div class="wrap">
+      <a href="/" class="home" aria-label={`${site.name} home`}><Logo /></a>
+    </div>
+  </header>
+  <main id="main" class="pp">
+    <div class="wrap">
+      <h1>{privacy.title}</h1>
+      <p class="lead">{privacy.intro}</p>
+      {privacy.sections.map((sec) => (
+        <section>
+          <h2>{sec.heading}</h2>
+          {sec.body.map((t) => <p>{t}</p>)}
+        </section>
+      ))}
+      <section>
+        <h2>Contact</h2>
+        <p>Questions about privacy: <a href={mailto('Privacy')}>{site.email}</a></p>
+      </section>
+      <p class="updated">Last updated {privacy.updated}.</p>
+    </div>
+  </main>
+  <footer class="pf">
+    <div class="wrap"><a href="/">Back to the home page</a><span>© {year} {site.name}</span></div>
+  </footer>
+</Base>
+<style>
+  .ph { background: var(--navy); padding-block: 1.25rem; }
+  .ph .home { color: #fff; text-decoration: none; }
+  .pp { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+  .pp .wrap { max-width: 44rem; }
+  h1 { font-size: var(--step-3); line-height: 1.1; }
+  .lead { margin-top: 1rem; font-size: var(--step-1); font-weight: 300; color: var(--ink-2); }
+  section { margin-top: 2.25rem; }
+  h2 { font-size: var(--step-1); font-weight: 600; }
+  section p { margin-top: 0.75rem; color: var(--ink-2); }
+  .updated { margin-top: 2.5rem; font-size: 0.9rem; color: var(--ink-2); }
+  .pf { border-top: 1px solid var(--line); }
+  .pf .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; font-size: 0.9rem; color: var(--ink-2); }
+</style>
