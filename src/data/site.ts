@@ -49,6 +49,11 @@ export const work = {
   columns: { sector: 'Sector', byHand: 'Done by hand today', automated: 'Once it’s automated' },
   rows: [
     {
+      sector: 'Trades and field services',
+      byHand: 'Technicians’ hours, job notes and travel retyped from job sheets into the job system, timesheets and invoices.',
+      automated: 'Jobs, hours and travel reconciled automatically. Timesheets and invoices drafted and ready to send.',
+    },
+    {
       sector: 'Horticulture',
       byHand: 'Harvest and pack-out numbers retyped from packhouse reports into grower statements.',
       automated: 'Reports pulled in as they land. Statements built, checked and sent on schedule.',
@@ -69,8 +74,13 @@ export const work = {
       automated: 'Every delivery matched as it happens. Only the mismatches go to a person.',
     },
     {
-      sector: 'Councils and utilities',
-      byHand: 'Alarms, logs and site reports reviewed after the fact, and resilience and security reviews pieced together from scattered data.',
+      sector: 'Councils',
+      byHand: 'Rates queries, consent questions and service requests arriving by email, phone and web form, triaged into queues by a person.',
+      automated: 'Requests classified, checked against the property record and routed with a summary attached, before anyone opens them.',
+    },
+    {
+      sector: 'Utilities',
+      byHand: 'Network alarms, logs and site reports reviewed after the fact, and resilience and security reviews pieced together from scattered data.',
       automated: 'AI watches operational data read-only, flags anomalies and drafts the review findings. Nothing it does touches control systems.',
     },
   ],
