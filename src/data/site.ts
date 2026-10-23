@@ -25,7 +25,7 @@ export const nav = [
 export const hero = {
   heading: 'Stop paying people to copy and paste.',
   lead: 'We automate the repetitive work between your systems. Fixed price, live in weeks, and looked after by us once it’s running.',
-  primaryCta: { label: 'Book an Automation Check', subject: 'Automation Check' },
+  primaryCta: { label: 'Book a free first call', subject: 'First call' },
   secondaryCta: { label: 'See how it works', href: '#engage' },
 };
 
@@ -221,13 +221,24 @@ export const about = {
 
 export const contact = {
   heading: 'What’s the job you’d automate first?',
-  body: 'Tell us about it in a couple of lines. We’ll come back within one business day with whether it’s a fit and what it would cost to find out properly.',
-  cta: { label: 'Book an Automation Check', subject: 'Automation Check' },
+  body: 'Tell us about it in a couple of lines. There’s no cost and no commitment until you agree to a fixed price.',
+  steps: [
+    { title: 'You tell us the job', body: 'A few lines by email about your business and the job: what it is, who does it and which systems it touches.' },
+    { title: 'A free first call', body: 'We come back within one business day to set up a short call, and tell you honestly whether it’s a fit.' },
+    { title: 'A fixed price, if it is', body: 'You get a fixed quote for an Automation Check, or for the Sprint straight away if the job is already clear.' },
+  ],
+  cta: { label: 'Book a free first call', subject: 'First call' },
+  emailBody: 'Business name:\n\nIndustry:\n\nThe job I’d automate first:\n\nRoughly how many people do it:\n\nThe systems involved:\n\nAnything else you’d like help with:\n',
 };
 
 export const footer = {
   tagline: 'New Zealand owned and operated. Working with businesses wherever they are.',
 };
 
-export const mailto = (subject?: string) =>
-  `mailto:${site.email}${subject ? `?subject=${encodeURIComponent(subject)}` : ''}`;
+export const mailto = (subject?: string, body?: string) => {
+  const params = [
+    subject ? `subject=${encodeURIComponent(subject)}` : '',
+    body ? `body=${encodeURIComponent(body)}` : '',
+  ].filter(Boolean);
+  return `mailto:${site.email}${params.length ? `?${params.join('&')}` : ''}`;
+};
