@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Logo from '../components/Logo.astro';
 import FlowDiagram from '../components/FlowDiagram.astro';
 import {
-  site, nav, hero, work, engage, principles, data, about, contact, footer, mailto,
+  site, nav, hero, why, work, engage, principles, data, about, contact, footer, mailto,
 } from '../data/site';
 
 const year = new Date().getFullYear();
@@ -30,6 +30,15 @@ const year = new Date().getFullYear();
   </header>
 
   <main id="main">
+    <section class="why">
+      <div class="wrap why-grid">
+        <h2>{why.heading}</h2>
+        <div class="why-body">
+          {why.paragraphs.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+    </section>
+
     <section id="work" class="work">
       <div class="wrap">
         <h2>{work.heading}</h2>
@@ -161,6 +170,12 @@ const year = new Date().getFullYear();
   main section { padding-block: clamp(4rem, 9vw, 7rem); }
   main h2 { font-size: var(--step-3); font-weight: 600; max-width: 22ch; }
   .intro { margin-top: 1rem; max-width: 40rem; font-size: var(--step-1); font-weight: 300; color: var(--ink-2); }
+
+  /* Why */
+  .why-grid { display: grid; gap: 2rem; }
+  @media (width >= 60rem) { .why-grid { grid-template-columns: 20rem 1fr; gap: 4rem; } }
+  .why-body { display: grid; gap: 1.25rem; max-width: 40rem; font-size: var(--step-1); font-weight: 300; line-height: 1.55; }
+  .why + .work { border-top: 1px solid var(--line); }
 
   /* What we automate */
   .table { margin-top: 3rem; border-top: 1px solid var(--line); }

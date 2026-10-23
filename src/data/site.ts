@@ -42,6 +42,15 @@ export const flow = {
   doneLines: ['Runs on its own.', 'Only the exceptions reach a person.'],
 };
 
+// Why AI needs DreamLogic: the data problem. Sits between the hero and the sectors.
+export const why = {
+  heading: 'AI is only as good as the data you give it',
+  paragraphs: [
+    'AI is remarkably good at spotting patterns, reasoning through messy information and making judgement calls. But in most businesses, the data it needs is scattered across inboxes, spreadsheets, job systems and accounts, and nothing brings it together.',
+    'That’s the gap we fill. We connect your systems, bring the data together cleanly and put AI to work on it, so it can analyse, judge and act on your real business, not just answer questions in a chat window.',
+  ],
+};
+
 export const work = {
   heading: 'The work nobody should be doing twice',
   intro:
@@ -54,19 +63,14 @@ export const work = {
       automated: 'Jobs, hours and travel reconciled automatically. Timesheets and invoices drafted and ready to send.',
     },
     {
-      sector: 'Horticulture',
-      byHand: 'Harvest and pack-out numbers retyped from packhouse reports into grower statements.',
-      automated: 'Reports pulled in as they land. Statements built, checked and sent on schedule.',
+      sector: 'Primary industries',
+      byHand: 'Harvest, pack-out and compliance records retyped from reports into grower statements, farm software and audit files.',
+      automated: 'Reports pulled in as they land. Statements built and sent, and records filed where the auditor expects them.',
     },
     {
-      sector: 'Agriculture',
-      byHand: 'Supplier invoices and compliance records keyed into farm software one at a time.',
-      automated: 'Invoices read, coded and posted. Records filed where the auditor expects them.',
-    },
-    {
-      sector: 'Insurance',
-      byHand: 'Premium payments and broker remittances allocated to policies line by line, with unmatched cash chased at month end.',
-      automated: 'Every payment allocated to the right policy as it lands. Only the ones that don’t match reach a person.',
+      sector: 'Finance and insurance',
+      byHand: 'Premiums, repayments and broker remittances allocated to policies and accounts line by line, with unmatched cash chased at month end.',
+      automated: 'Every payment allocated to the right policy or account as it lands. Only the ones that don’t match reach a person.',
     },
     {
       sector: 'Logistics',
