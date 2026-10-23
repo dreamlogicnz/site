@@ -74,8 +74,8 @@ export const work = {
     },
     {
       sector: 'Finance and insurance',
-      byHand: 'Premiums, repayments and broker remittances allocated to policies and accounts line by line, with unmatched cash chased at month end.',
-      automated: 'Every payment allocated to the right policy or account as it lands. Only the ones that don’t match reach a person.',
+      byHand: 'Premiums, repayments and broker remittances allocated line by line, with unmatched cash chased at month end.',
+      automated: 'Every payment allocated as it lands. Only the mismatches reach a person.',
     },
     {
       sector: 'Professional services',
@@ -90,12 +90,12 @@ export const work = {
     {
       sector: 'Councils',
       byHand: 'Rates queries, consent questions and service requests arriving by email, phone and web form, triaged into queues by a person.',
-      automated: 'Requests classified, checked against the property record and routed with a summary attached, before anyone opens them.',
+      automated: 'Requests classified, checked against the property record and routed with a summary, before anyone opens them.',
     },
     {
       sector: 'Utilities',
-      byHand: 'Network alarms, logs and site reports reviewed after the fact, and resilience and security reviews pieced together from scattered data.',
-      automated: 'AI watches operational data read-only, flags anomalies and drafts the review findings. Nothing it does touches control systems.',
+      byHand: 'Alarms, logs and site reports reviewed after the fact, and resilience reviews pieced together from scattered data.',
+      automated: 'AI watches operational data read-only, flags anomalies and drafts review findings. It never touches control systems.',
     },
   ],
 };
@@ -124,7 +124,7 @@ export const engage = {
       duration: 'Monthly',
       price: 'From $800 a month',
       body: 'We monitor it, fix it, make changes as your business moves, and report the hours it saved.',
-      note: 'Twelve-month term, renewing annually.',
+      note: 'Twelve-month term, renewing annually. Plus running costs such as AI usage and hosting, passed on at cost and capped by spending limits you agree. Any licences are set out in your statement of work.',
     },
   ],
   aside:
@@ -140,19 +140,19 @@ export const principles = {
     },
     {
       title: 'You know where your data goes',
-      body: 'We build on trusted global platforms where they’re the right tool. Before anything goes live, we map out what data goes where, and keep sensitive data in New Zealand or on your own hardware where it matters.',
+      body: 'Before anything goes live, we map what data goes where. Sensitive data stays where you choose, whether that’s your own country or your own hardware.',
     },
     {
       title: 'Works with the systems you have',
-      body: 'We use proper integrations where they exist. Where they don’t, our automation can work through the software’s screens just like your team does, so older systems can join in too.',
+      body: 'We use proper integrations where they exist. Where they don’t, our automation works through the screens like your team does, so older systems join in too.',
     },
     {
       title: 'AI on your own hardware',
-      body: 'Where your data can’t leave the building, we set up and run AI models on your own equipment, sized to the job and looked after like everything else we build.',
+      body: 'Where data can’t leave the building, we run AI models on your own equipment and look after them like everything else we build.',
     },
     {
       title: 'You own what we build',
-      body: 'We use open tools and models we can swap out, and every change is recorded. If you’d rather run it yourselves at the end of a term, we’ll hand it over properly: the code, the history, the documentation, and a walkthrough with your team.',
+      body: 'Open tools and models we can swap out, with every change recorded. If you’d rather run it yourselves after a term, we’ll hand over the code, history and documentation, and walk your team through it.',
     },
   ],
 };
@@ -161,23 +161,23 @@ export const principles = {
 export const data = {
   heading: 'Data and security',
   intro:
-    'Security and AI aren’t a trade-off. We design every automation with both in mind from the first conversation, using proven practices, so you get the benefit of AI and stay in control of your data.',
+    'Security and AI aren’t a trade-off. We design for both from the first conversation, so you get the benefit of AI and stay in control of your data.',
   stackHeading: 'How we keep it safe',
   stack: [
     {
       name: 'Reviewed changes',
       role: 'Code and change history',
-      body: 'Every change to your automation is reviewed and recorded. If you take it in-house, the full history comes with it.',
+      body: 'Every change is reviewed and recorded, and the full history comes with it if you take it in-house.',
     },
     {
       name: 'Secure hosting',
       role: 'Where it runs',
-      body: 'Workflows and web pages run on established cloud infrastructure, behind its security and access controls.',
+      body: 'Runs on established cloud infrastructure, behind its security and access controls.',
     },
     {
       name: 'Encryption',
       role: 'In transit and at rest',
-      body: 'Data is encrypted as it moves between systems and where it’s stored, using industry-standard methods, wherever the systems involved support it.',
+      body: 'Encrypted in transit and at rest, wherever the systems involved support it.',
     },
     {
       name: 'Secrets vaults',
@@ -187,12 +187,12 @@ export const data = {
     {
       name: 'Least-privilege access',
       role: 'Who can see what',
-      body: 'Every system, and every AI model, gets access to only what its job needs. Nothing more.',
+      body: 'Every system and AI model sees only what its job needs.',
     },
     {
       name: 'AI models',
       role: 'Chosen per job',
-      body: 'We tell you which provider sees which data. Where it matters, sensitive data stays in New Zealand or on your own hardware.',
+      body: 'You know which provider sees which data and which country it’s in, and you choose the trade-off between cost, capability and where it runs.',
     },
   ],
   writingHeading: 'What you get in writing',
@@ -203,7 +203,7 @@ export const data = {
     },
     {
       title: 'A data map',
-      body: 'What data the automation touches, which systems it passes through, and which country each one is in. Agreed before anything goes live.',
+      body: 'What data is touched, where it flows and which country it’s in. Agreed before go-live.',
     },
   ],
 };
