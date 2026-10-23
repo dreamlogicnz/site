@@ -249,8 +249,8 @@ export const privacy = {
     {
       heading: 'What we collect',
       body: [
-        'This website doesn’t use cookies, analytics or advertising trackers, and it has no forms. We don’t build profiles of visitors.',
-        'Like any website, the service that hosts it records basic technical details of each visit, such as your IP address, browser and the page requested. These are used only to keep the site secure and working.',
+        'This website uses privacy-friendly analytics to count visits and see which pages are useful. It doesn’t use cookies or advertising trackers, it doesn’t follow you across other sites, and it has no forms. We don’t build profiles of visitors.',
+        'Like any website, the service that hosts and protects it records basic technical details of each visit, such as your IP address, browser and the page requested. These are used only to measure visits, protect the site from attacks and keep it working.',
         'If you email us, we receive what you choose to send: usually your name, email address, organisation and a description of the work you’d like help with.',
       ],
     },
