@@ -228,7 +228,7 @@ export const contact = {
     { title: 'A fixed price, if it is', body: 'You get a fixed quote for an Automation Check, or for the Sprint straight away if the job is already clear.' },
   ],
   cta: { label: 'Book a free first call', subject: 'First call' },
-  emailBody: 'Business name:\n\nIndustry:\n\nNumber of staff:\n\nThe job I’d automate first:\n\nRoughly how many people do it:\n\nThe systems involved:\n\nAnything else you’d like help with:\n',
+  emailBody: 'Business name:\n\nIndustry:\n\nThe job I’d automate first:\n\nRoughly how many people do it:\n\nThe systems involved:\n\nAnything else you’d like help with:\n',
 };
 
 export const footer = {
