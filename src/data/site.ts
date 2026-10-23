@@ -51,8 +51,8 @@ export const why = {
   ],
   // Diagram under the paragraphs. Four sources and three outcomes is the designed fit.
   diagram: {
-    sourcesLabel: 'Your data today',
-    sources: ['Email', 'Spreadsheets', 'Job system', 'Accounts'],
+    sourcesLabel: 'Wherever your data lives',
+    sources: ['Databases', 'Software', 'Websites', 'External sources'],
     hub: { label: 'DreamLogic', body: 'Connected, cleaned and combined' },
     ai: 'AI',
     outputs: [
