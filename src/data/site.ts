@@ -49,6 +49,18 @@ export const why = {
     'AI is remarkably good at spotting patterns, reasoning through messy information and making judgement calls. But in most businesses, the data it needs is scattered across inboxes, spreadsheets, job systems and accounts, and nothing brings it together.',
     'That’s the gap we fill. We connect your systems, bring the data together cleanly and put AI to work on it, so it can analyse, judge and act on your real business, not just answer questions in a chat window.',
   ],
+  // Diagram under the paragraphs. Four sources and three outcomes is the designed fit.
+  diagram: {
+    sourcesLabel: 'Your data today',
+    sources: ['Email', 'Spreadsheets', 'Job system', 'Accounts'],
+    hub: { label: 'DreamLogic', body: 'Connected, cleaned and combined' },
+    ai: 'AI',
+    outputs: [
+      { title: 'Analyse', body: 'Spots patterns' },
+      { title: 'Judge', body: 'Makes the call' },
+      { title: 'Act', body: 'Gets it done' },
+    ],
+  },
 };
 
 export const work = {
