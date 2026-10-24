@@ -66,7 +66,7 @@ export const why = {
 export const work = {
   heading: 'The work nobody should be doing twice',
   intro:
-    'Built for organisations of 5 to 500 people, from trades and primary industries through to councils and utilities. Whatever the sector, the hours usually go on one of these six jobs.',
+    'Built for organisations of 5 to 500 people, from trades and primary industries through to councils and utilities. Whatever the sector, the hours usually go on one of these five jobs.',
   columns: { sector: 'The job', byHand: 'Done by hand today', automated: 'Once it’s automated' },
   rows: [
     {
@@ -93,11 +93,6 @@ export const work = {
       sector: 'Deciding from live data',
       byHand: 'Someone checking the forecast, sensors or site readings and deciding whether to spray, irrigate, send crews out or hold off.',
       automated: 'Weather, sensor and operational data checked continuously against your rules. The call made or recommended, with the reasoning shown.',
-    },
-    {
-      sector: 'Keeping IT running',
-      byHand: 'Servers left running overnight, network gear undocumented, and services restarted whenever someone notices they’ve stopped.',
-      automated: 'Servers scaled back after hours, network gear documented as it changes, and stuck services restarted within guardrails you set. Anything outside them goes to a person first.',
     },
   ],
 };
