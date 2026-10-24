@@ -66,48 +66,33 @@ export const why = {
 export const work = {
   heading: 'The work nobody should be doing twice',
   intro:
-    'Built for organisations of 5 to 500 people, where the same repetitive job is eating hours every week. These are the ones we hear about most.',
-  columns: { sector: 'Sector', byHand: 'Done by hand today', automated: 'Once it’s automated' },
+    'Built for organisations of 5 to 500 people, from trades and primary industries through to councils and utilities. These are the challenges we hear about most, and each one is well suited to automation.',
+  columns: { sector: 'The job', byHand: 'Done by hand today', automated: 'Once it’s automated' },
   rows: [
     {
-      sector: 'Trades and field services',
-      byHand: 'Technicians’ hours, job notes and travel retyped from job sheets into the job system, timesheets and invoices.',
-      automated: 'Jobs, hours and travel reconciled automatically. Timesheets and invoices drafted and ready to send.',
+      sector: 'Retyping between systems',
+      byHand: 'Job sheets, supplier emails and reports keyed into the job system, the accounts and a spreadsheet or two.',
+      automated: 'Data picked up as it arrives and entered once, everywhere it needs to go. Timesheets, orders and invoices drafted and ready to check.',
     },
     {
-      sector: 'Primary industries',
-      byHand: 'Harvest, pack-out and compliance records retyped from reports into grower statements, farm software and audit files.',
-      automated: 'Reports pulled in as they land. Statements built and sent, and records filed where the auditor expects them.',
+      sector: 'Matching money',
+      byHand: 'Payments, remittances and supplier invoices matched line by line, with the leftovers chased at month end.',
+      automated: 'Every payment matched as it lands. Only the mismatches reach a person.',
     },
     {
-      sector: 'Manufacturing and distribution',
-      byHand: 'Purchase orders, stock levels and quality records keyed between supplier emails, the production floor and the accounts.',
-      automated: 'Orders, stock and quality records flowing between systems as they change. Shortfalls flagged before they hold up a job.',
+      sector: 'Sorting what comes in',
+      byHand: 'Queries and requests arriving by email, phone and web form, read and sorted into queues by a person.',
+      automated: 'Each request classified, checked against your records and routed with a summary, before anyone opens it.',
     },
     {
-      sector: 'Finance and insurance',
-      byHand: 'Premiums, repayments and broker remittances allocated line by line, with unmatched cash chased at month end.',
-      automated: 'Every payment allocated as it lands. Only the mismatches reach a person.',
+      sector: 'Pulling reports together',
+      byHand: 'Monthly reports, compliance records and reviews pieced together by hand from data spread across several systems.',
+      automated: 'Data gathered and combined as it changes. Reports and findings drafted for a person to review and sign off.',
     },
     {
-      sector: 'Professional services',
-      byHand: 'Billable time pieced together from calendars and email, and client documents chased, sorted and filed by hand.',
-      automated: 'Time drafted from the work as it happens. Client documents collected, checked and filed, ready for review.',
-    },
-    {
-      sector: 'Logistics',
-      byHand: 'Proof-of-delivery photos and carrier invoices matched by hand at month end.',
-      automated: 'Every delivery matched as it happens. Only the mismatches go to a person.',
-    },
-    {
-      sector: 'Councils',
-      byHand: 'Rates queries, consent questions and service requests arriving by email, phone and web form, triaged into queues by a person.',
-      automated: 'Requests classified, checked against the property record and routed with a summary, before anyone opens them.',
-    },
-    {
-      sector: 'Utilities',
-      byHand: 'Alarms, logs and site reports reviewed after the fact, and resilience reviews pieced together from scattered data.',
-      automated: 'AI watches operational data read-only, flags anomalies and drafts review findings. It never touches control systems.',
+      sector: 'Deciding from live data',
+      byHand: 'Someone checking the forecast, sensors or site readings and deciding whether to spray, irrigate, send crews out or hold off.',
+      automated: 'Weather, sensor and operational data checked continuously against your rules. The call made or recommended, with the reasoning shown.',
     },
   ],
 };
