@@ -66,7 +66,7 @@ export const why = {
 export const work = {
   heading: 'The work nobody should be doing twice',
   intro:
-    'Built for organisations of 5 to 500 people, from trades and primary industries through to councils and utilities. Whatever the sector, the hours usually go on one of these five jobs.',
+    'Built for organisations of 5 to 500 people, from trades and primary industries through to councils and utilities. These are the challenges we hear about most, and each one is well suited to automation.',
   columns: { sector: 'The job', byHand: 'Done by hand today', automated: 'Once it’s automated' },
   rows: [
     {
