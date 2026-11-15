@@ -1,8 +1,11 @@
 ---
 // animated: the mark cycles through four versions (knot, cogs, loop, workflow). Without JavaScript,
 // or with reduced motion on, it stays as the knot.
-interface Props { size?: number; animated?: boolean }
-const { size = 28, animated = false } = Astro.props;
+// size: the mark in px. wordRem: the wordmark's font size in rem. The mark and gap are set in em,
+// so the whole logo shrinks together on narrow screens.
+interface Props { size?: number; wordRem?: number; animated?: boolean }
+const { size = 28, wordRem = 1.2, animated = false } = Astro.props;
+const markEm = size / (wordRem * 16);
 
 // A gear outline centred on (0,0): n teeth between root radius rr and tip radius rt, with a hole.
 function cogPath(n: number, rr: number, rt: number, phase: number, hole: number) {
@@ -20,7 +23,7 @@ function cogPath(n: number, rr: number, rt: number, phase: number, hole: number)
 }
 const inset = 'translate(60 60) scale(0.9) translate(-60 -60)';
 ---
-<span class="logo">
+<span class="logo" style={`--logo-word:${wordRem}rem;--logo-mark:${markEm}em`}>
   <svg width={size} height={size} viewBox="0 0 120 120" aria-hidden="true" focusable="false" data-logo-anim={animated ? '' : undefined}>
     <path d="M46 16H92a12 12 0 0 1 12 12V74" fill="none" stroke="currentColor" stroke-width="16" />
     <path d="M16 46V92a12 12 0 0 0 12 12H74" fill="none" stroke="currentColor" stroke-width="16" />
@@ -65,8 +68,9 @@ const inset = 'translate(60 60) scale(0.9) translate(-60 -60)';
 </span>
 
 <style>
-  .logo { display: inline-flex; align-items: center; gap: 0.55rem; color: inherit; }
-  .word { font-size: 1.2rem; font-weight: 300; letter-spacing: -0.02em; }
+  .logo { display: inline-flex; align-items: center; gap: 0.46em; color: inherit; font-size: min(var(--logo-word), 9.5vw); }
+  .logo svg { width: var(--logo-mark); height: var(--logo-mark); flex: none; }
+  .word { font-size: 1em; font-weight: 300; letter-spacing: -0.02em; line-height: 1; }
   .word b { font-weight: 600; }
 </style>
 
