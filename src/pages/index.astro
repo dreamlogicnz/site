@@ -12,7 +12,7 @@ const year = new Date().getFullYear();
 <Base>
   <header class="hero">
     <nav class="wrap topbar" aria-label="Main">
-      <a href="#main" class="home" aria-label={`${site.name} home`}><Logo /></a>
+      <a href="#main" class="home" aria-label={`${site.name} home`}><Logo animated size={56} wordRem={2.4} /></a>
       <ul>
         {nav.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
       </ul>
@@ -163,7 +163,7 @@ const year = new Date().getFullYear();
     color: #f3f5f6;
     padding-bottom: clamp(3rem, 8vw, 6rem);
   }
-  .topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.25rem; }
+  .topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem 1rem; padding-block: 1.25rem; }
   .home { text-decoration: none; }
   .topbar ul { display: flex; gap: clamp(1rem, 3vw, 2rem); margin: 0; padding: 0; list-style: none; font-size: 0.95rem; }
   .topbar ul a { color: var(--mist); text-decoration: none; }
